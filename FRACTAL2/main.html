@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="nottranslate" translate="no">
+  <head>
+    <meta name="google" content="notranslate">    
+    <meta charset="utf-8" />
+    <title>CGSG:VG4 CGSG'SummerPractice2024. First</title>
+    <link rel="shortcut icon" href="C.BMP" type="image/bmp" />
+  </head>
+  <body>
+    <canvas id="myCan" width="700px" height="700px"></canvas>
+    <script type="module">
+      import * as vigl from "./script.js";
+ 
+      window.addEventListener("load", () => {
+        vigl.initGL();
+        const draw = () => {
+          // drawing
+          vigl.render();
+ 
+          // animation register
+          window.requestAnimationFrame(draw);
+        };
+       
+        draw();
+      });
+    </script>
+  </body>
+</html>
